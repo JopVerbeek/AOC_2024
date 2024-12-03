@@ -21,7 +21,6 @@ for line in lines:
             state = True
         elif op == "don't()":
             state = False
-        else:
-            if state:
-                c2 += prod(list(map(int, re.findall(r"\d+", op))))
+        elif state:
+            c2 += prod(list(map(int, re.findall(r"\d+", op))))
 print(c2)
