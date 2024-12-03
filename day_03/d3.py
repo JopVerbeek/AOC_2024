@@ -10,14 +10,13 @@ c = 0
 for line in lines:
     for mult in re.findall(r"mul\(\d+,\d+\)", line):
         c += prod(list(map(int, re.findall(r"\d+", mult))))
-
+print(c)
 
 # part2
 c2 = 0
 state = True
 for line in lines:
     for op in re.findall(r"mul\(\d+,\d+\)|don't\(\)|do\(\)", line):
-        print(op)
         if op == "do()":
             state = True
         elif op == "don't()":
@@ -25,4 +24,4 @@ for line in lines:
         else:
             if state:
                 c2 += prod(list(map(int, re.findall(r"\d+", op))))
-                print(c2)
+print(c2)
