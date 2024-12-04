@@ -30,9 +30,9 @@ for r in range(R):
             xmas_counter_1 += 1
 
         #  dont go out of bound on left
-        if r - 3 >= 0 and c + 3 < C and grid[r][c] == 'X' and grid[r - 1][c + 1] == 'M' and grid[r - 2][c + 2] == 'A' and grid[r - 3][c + 3] == 'S':
+        if c + 3 < C and r - 3 >= 0  and grid[r][c] == 'X' and grid[r - 1][c + 1] == 'M' and grid[r - 2][c + 2] == 'A' and grid[r - 3][c + 3] == 'S':
             xmas_counter_1 += 1
-        if r - 3 >= 0 and c + 3 < C and grid[r][c] == 'S' and grid[r - 1][c + 1] == 'A' and grid[r - 2][c + 2] == 'M' and grid[r - 3][c + 3] == 'X':
+        if c + 3 < C and r - 3 >= 0 and grid[r][c] == 'S' and grid[r - 1][c + 1] == 'A' and grid[r - 2][c + 2] == 'M' and grid[r - 3][c + 3] == 'X':
             xmas_counter_1 += 1
 
         # part 2
