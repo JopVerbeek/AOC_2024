@@ -24,7 +24,8 @@ def get_trails(grid, r, c):
                 continue
             if grid[r_r][c_c] != grid[rr][cc] + 1:
                 continue
-            # if (r_r, c_c) in seen: uncomment this line to get the answer to part 1
+            #  uncomment line 28, 29 to get the answer to part 1
+            # if (r_r, c_c) in seen:
             #     continue
             seen.add((r_r, c_c))
 

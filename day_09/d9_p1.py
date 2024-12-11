@@ -7,6 +7,7 @@ with open('input.txt') as f:
 disk = []
 counter = 0
 count = 0
+
 for i, num in enumerate(files, start=1):
     counter += 1
     if i%2 != 0:
