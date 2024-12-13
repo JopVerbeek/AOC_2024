@@ -1,4 +1,8 @@
 from functools import cache
+import time
+start_time = time.time()
+
+
 
 with open('input.txt') as f:
     stones = list(map(int, f.read().split()))
@@ -18,5 +22,6 @@ stone_count = 0
 for stone in stones:
     stone_count += stone_counter(75, stone)     
 
-
 print(stone_count)
+
+print("Process finished --- %s seconds ---" % (time.time() - start_time))
